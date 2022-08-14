@@ -84,13 +84,13 @@ namespace database
         public void BanPlayer()
         {
             Console.WriteLine("Введите ID игрока которого хотете забанить:");
-            _players[GetIndex()].SetBan(true);
+            _players[GetIndex()].SetBan();
         }
 
         public void UnbanPlayer()
         {
             Console.WriteLine("Введите ID игрока которого хотете разбанить:");
-            _players[GetIndex()].SetBan(false) ;
+            _players[GetIndex()].SetUnban() ;
         }
 
         public void ShowPlayers()
@@ -177,9 +177,14 @@ namespace database
             _isBanned = false;
         }
 
-        public void SetBan(bool isBanned)
+        public void SetBan()
         {
-            _isBanned = isBanned;
+            _isBanned = true;
+        }
+
+        public void SetUnban()
+        {
+            _isBanned = false;
         }
 
         public void ShowInfo()
