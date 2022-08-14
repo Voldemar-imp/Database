@@ -126,7 +126,7 @@ namespace database
             int counter = 0;
             int index = 0;           
             bool indexIsRight = false;
-            bool isFound = false;
+            bool indexIsFound = false;
 
             while (indexIsRight == false)
             {
@@ -137,13 +137,13 @@ namespace database
                     if (player.Identifier == number)
                     {
                         index = counter;
-                        isFound = true;
+                        indexIsFound = true;
                         indexIsRight = true;
                     }
                     counter++;
                 }
 
-                if (isFound == false)
+                if (indexIsFound == false)
                 {
                     Console.WriteLine("Игрока с таким ID не существует");
                     counter = 0;
